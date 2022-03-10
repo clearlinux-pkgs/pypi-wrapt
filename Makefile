@@ -1,5 +1,5 @@
 PKG_NAME := pypi-wrapt
-URL = https://files.pythonhosted.org/packages/eb/f6/d81ccf43ac2a3c80ddb6647653ac8b53ce2d65796029369923be06b815b8/wrapt-1.13.3.tar.gz
+URL = https://files.pythonhosted.org/packages/c7/b4/3a937c7f8ee4751b38274c8542e02f42ebf3e080f1344c4a2aff6416630e/wrapt-1.14.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

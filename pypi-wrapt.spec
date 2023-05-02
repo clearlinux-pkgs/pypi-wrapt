@@ -5,14 +5,12 @@
 #
 Name     : pypi-wrapt
 Version  : 1.15.0
-Release  : 77
+Release  : 78
 URL      : https://files.pythonhosted.org/packages/f8/7d/73e4e3cdb2c780e13f9d87dc10488d7566d8fd77f8d68f0e416bfbd144c7/wrapt-1.15.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f8/7d/73e4e3cdb2c780e13f9d87dc10488d7566d8fd77f8d68f0e416bfbd144c7/wrapt-1.15.0.tar.gz
 Summary  : Module for decorators, wrappers and monkey patching.
 Group    : Development/Tools
 License  : BSD-2-Clause
-Requires: pypi-wrapt-filemap = %{version}-%{release}
-Requires: pypi-wrapt-lib = %{version}-%{release}
 Requires: pypi-wrapt-license = %{version}-%{release}
 Requires: pypi-wrapt-python = %{version}-%{release}
 Requires: pypi-wrapt-python3 = %{version}-%{release}
@@ -28,24 +26,6 @@ wrapt
 The aim of the **wrapt** module is to provide a transparent object proxy
 for Python, which can be used as the basis for the construction of function
 wrappers and decorator functions.
-
-%package filemap
-Summary: filemap components for the pypi-wrapt package.
-Group: Default
-
-%description filemap
-filemap components for the pypi-wrapt package.
-
-
-%package lib
-Summary: lib components for the pypi-wrapt package.
-Group: Libraries
-Requires: pypi-wrapt-license = %{version}-%{release}
-Requires: pypi-wrapt-filemap = %{version}-%{release}
-
-%description lib
-lib components for the pypi-wrapt package.
-
 
 %package license
 Summary: license components for the pypi-wrapt package.
@@ -67,7 +47,6 @@ python components for the pypi-wrapt package.
 %package python3
 Summary: python3 components for the pypi-wrapt package.
 Group: Default
-Requires: pypi-wrapt-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(wrapt)
 
@@ -87,15 +66,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682022326
+export SOURCE_DATE_EPOCH=1683048726
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -130,14 +109,6 @@ popd
 %files
 %defattr(-,root,root,-)
 
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pypi-wrapt
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
-
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-wrapt/fc4e40f7a828d160f53384df5f4a43861aed7249
@@ -147,4 +118,5 @@ popd
 
 %files python3
 %defattr(-,root,root,-)
+/V3/usr/lib/python3*/*
 /usr/lib/python3*/*

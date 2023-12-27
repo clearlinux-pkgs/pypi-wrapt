@@ -7,7 +7,7 @@
 #
 Name     : pypi-wrapt
 Version  : 1.16.0
-Release  : 81
+Release  : 82
 URL      : https://files.pythonhosted.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff3e4b603ce84c481d6d7346be0a/wrapt-1.16.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/95/4c/063a912e20bcef7124e0df97282a8af3ff3e4b603ce84c481d6d7346be0a/wrapt-1.16.0.tar.gz
 Summary  : Module for decorators, wrappers and monkey patching.

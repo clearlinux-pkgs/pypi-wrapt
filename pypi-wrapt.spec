@@ -6,10 +6,10 @@
 # autospec commit: f4a13a5
 #
 Name     : pypi-wrapt
-Version  : 1.17.1
-Release  : 85
-URL      : https://files.pythonhosted.org/packages/c8/dd/35c573cc2b4b8d65ea96bba0247d05710f284857d30e2266d1874f1c727d/wrapt-1.17.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/c8/dd/35c573cc2b4b8d65ea96bba0247d05710f284857d30e2266d1874f1c727d/wrapt-1.17.1.tar.gz
+Version  : 1.17.2
+Release  : 86
+URL      : https://files.pythonhosted.org/packages/c3/fc/e91cc220803d7bc4db93fb02facd8461c37364151b8494762cc88b0fbcef/wrapt-1.17.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c3/fc/e91cc220803d7bc4db93fb02facd8461c37364151b8494762cc88b0fbcef/wrapt-1.17.2.tar.gz
 Summary  : Module for decorators, wrappers and monkey patching.
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -57,10 +57,10 @@ python3 components for the pypi-wrapt package.
 
 
 %prep
-%setup -q -n wrapt-1.17.1
-cd %{_builddir}/wrapt-1.17.1
+%setup -q -n wrapt-1.17.2
+cd %{_builddir}/wrapt-1.17.2
 pushd ..
-cp -a wrapt-1.17.1 buildavx2
+cp -a wrapt-1.17.2 buildavx2
 popd
 
 %build
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1736801187
+export SOURCE_DATE_EPOCH=1736860712
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
